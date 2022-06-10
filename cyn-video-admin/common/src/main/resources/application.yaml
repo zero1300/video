@@ -1,0 +1,7 @@
+server:
+  port: 8979
+spring:
+  application:
+    name: API-common
+
+

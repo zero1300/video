@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.verda.dao.VideoDao">
+    <resultMap type="fun.verda.entity.Video" id="VideoMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="intro" column="intro" jdbcType="VARCHAR"/>
+        <result property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="cover" column="cover" jdbcType="VARCHAR"/>
+        <result property="link" column="link" jdbcType="VARCHAR"/>
+        <result property="categoryId" column="category_id" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="deletedAt" column="deleted_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into video.video(title, intro, uid, cover, link, category_id, created_at, updated_at, deleted_at)
+        values (#{title}, #{intro}, #{uid}, #{cover}, #{link}, #{categoryId}, #{createdAt}, #{updatedAt}, #{deletedAt})
+    </insert>
+
+    <select id="queryAllByLimit" resultMap="VideoMap">
+        select
+            id, title, intro, uid, cover, link, category_id, created_at, updated_at, deleted_at
+        from video.video
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--根据类表id查询视频列表-->
+    <select id="findAllByCategoryId" resultMap="VideoMap">
+        select
+            id, title, intro, uid, cover, link, category_id, created_at, updated_at, deleted_at
+        from video.video
+        where category_id = #{categoryId}
+        limit #{offset},#{limit}
+    </select>
+
+    <select id="queryById" resultMap="VideoMap">
+        select
+            id, title, intro, uid, cover, link, category_id, created_at, updated_at, deleted_at
+        from video.video
+        where id = #{id}
+    </select>
+
+
+</mapper>

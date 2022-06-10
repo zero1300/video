@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.verda.dao.UserDao">
+
+    <resultMap type="fun.verda.entity.User" id="UserMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="intro" column="intro" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="phoneLinked" column="phone_linked" jdbcType="OTHER"/>
+        <result property="openid" column="openid" jdbcType="VARCHAR"/>
+        <result property="wechatLinked" column="wechat_linked" jdbcType="OTHER"/>
+        <result property="followingCount" column="following_count" jdbcType="INTEGER"/>
+        <result property="followersCount" column="followers_count" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="deletedAt" column="deleted_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--根据手机号查询用户信息-->
+    <select id="findByPhone" resultMap="UserMap">
+        select
+            id, name, avatar, intro, phone, phone_linked, openid, wechat_linked, following_count, followers_count, created_at, updated_at, deleted_at
+        from video.user
+        where phone = #{phone}
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into video.user(name, avatar, intro, phone, phone_linked, openid, wechat_linked, following_count, followers_count, created_at, updated_at, deleted_at)
+        values (#{name}, #{avatar}, #{intro}, #{phone}, #{phoneLinked}, #{openid}, #{wechatLinked}, #{followingCount}, #{followersCount}, #{createdAt}, #{updatedAt}, #{deletedAt})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update video.user
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="avatar != null and avatar != ''">
+                avatar = #{avatar},
+            </if>
+            <if test="intro != null and intro != ''">
+                intro = #{intro},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="phoneLinked != null">
+                phone_linked = #{phoneLinked},
+            </if>
+            <if test="openid != null and openid != ''">
+                openid = #{openid},
+            </if>
+            <if test="wechatLinked != null">
+                wechat_linked = #{wechatLinked},
+            </if>
+            <if test="followingCount != null">
+                following_count = #{followingCount},
+            </if>
+            <if test="followersCount != null">
+                followers_count = #{followersCount},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="deletedAt != null">
+                deleted_at = #{deletedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="queryById" resultMap="UserMap">
+        select
+            id, name, avatar, intro, phone, phone_linked, openid, wechat_linked, following_count, followers_count, created_at, updated_at, deleted_at
+        from video.user
+        where id = #{id}
+    </select>
+
+
+
+</mapper>

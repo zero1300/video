@@ -1,0 +1,11 @@
+server:
+  port: 9994
+spring:
+  application:
+    name: API-SMS
+  cloud:
+    nacos:
+      server-addr: 192.168.10.11:8848
+  redis:
+    host: 192.168.10.11
+    port: 6379

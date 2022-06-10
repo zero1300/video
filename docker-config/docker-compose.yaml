@@ -1,0 +1,74 @@
+version: "3.3"
+
+networks:
+  cyn_network:
+
+volumes:
+  data:
+  redisdata:
+  mqdata:
+
+services:
+  nacos:
+    image: nacos/nacos-server:2.0.2
+    ports: 
+      - "8848:8848"
+    environment:
+      - "JVM_XMS=256m"
+      - "JVM_XMX=256m"
+      - "MODE=standalone"
+    networks:
+      - cyn_network
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    networks:
+      - cyn_network
+    volumes:
+      - data:/var/lib/mysql
+      - ./video.sql:/docker-entrypoint-initdb.d/video.sql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_DATABASE=video"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+
+  rabbitmq:
+    image: rabbitmq:3.8-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - cyn_network
+    env_file:
+      - ./rabbitmq.env
+    volumes:
+      - mqdata:/var/lib/rabbitmq
+
+  es:
+    image: elasticsearch:6.8.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - cyn_network
+
+  kibana:
+    image: kibana:6.8.0
+    ports:
+      - 5601:5601
+    networks:
+      - cyn_network
+    depends_on:
+      - es
+
+
+  
+  

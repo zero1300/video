@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.verda.dao.CategoryDao">
+
+    <resultMap type="fun.verda.entity.Category" id="CategoryMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="deletedAt" column="deleted_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap type="fun.verda.entity.Category" id="CategoriesMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <collection property="children" javaType="list" ofType="fun.verda.entity.Category">
+            <id property="id" column="cid" jdbcType="INTEGER"/>
+            <result property="name" column="cname" jdbcType="VARCHAR"/>
+            <result property="parentId" column="cparentId"/>
+
+        </collection>
+    </resultMap>
+
+    <select id="queryByFirstLevel" resultMap="CategoriesMap">
+        SELECT
+            c.id,
+            c.NAME,
+            c1.id cid,
+            c1.NAME cname,
+            c1.parent_id cparentId
+        FROM
+            video.category c
+                LEFT JOIN video.category c1 ON c1.parent_id = c.id
+        WHERE
+            c.parent_id IS NULL
+    </select>
+
+    <select id="queryById" resultMap="CategoryMap">
+        SELECT
+           id,
+           name,
+           parent_id,
+           created_at,
+           updated_at,
+           deleted_at
+        FROM
+            video.category
+        WHERE
+            id = #{id}
+    </select>
+
+    <update id="update">
+        update video.category
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="deletedAt != null">
+                deleted_at = #{deletedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into video.category(name, parent_id, created_at, updated_at, deleted_at) values (#{name}, #{parentId}, #{createdAt}, #{updatedAt}, #{deletedAt})
+    </insert>
+
+    <delete id="deleteById">
+        delete from category where id = #{id}
+    </delete>
+</mapper>
+

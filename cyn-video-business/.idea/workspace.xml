@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3af5fd9-8e2d-49a5-b017-f2ab7514b0b0" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/java/fun/verda/CategoryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/java/fun/verda/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/java/fun/verda/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/java/fun/verda/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/java/fun/verda/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/src/main/resources/mapper/CategoryDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Following.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Played.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/entity/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/utils/JSONUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/fun/verda/utils/RedisPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/fun/verda/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/fun/verda/RateLimitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/ApiSearchApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/config/RestClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/mq/VideoConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/service/VideoSearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/service/VideoSearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/vo/CommentVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/vo/Reviewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/vo/VideoDetailVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/fun/verda/vo/VideoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/fun/verda/SMSApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/fun/verda/controller/SMSController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/fun/verda/vo/MsgVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/UserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/annotations/RequiredToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/controller/UserServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/dao/FavoriteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/dao/PlayedDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/feignClient/VideoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/interceptors/TokenInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/FavoriteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/PlayedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/impl/FavoriteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/impl/PlayedServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/utils/ImageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/utils/OSSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/vo/CommentVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/vo/Reviewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/fun/verda/vo/VideoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/CommentDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/FavoriteDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/PlayedDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/UserDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/VideoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/controller/VideoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/controller/VideoServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/dao/VideoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/feignclients/CategoryClients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/feignclients/UserClients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/service/VideoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/service/impl/VideoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/vo/CommentVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/vo/Reviewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/vo/VideoDetailVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/java/fun/verda/vo/VideoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/src/main/resources/mapper/userDao.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2A3epTF0MoVv9RI7NOcq4a7eioL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Workspace/java/cyn-video-business/gateway/target/classes/fun/verda/bean&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;78c6c6b5857d5e0fdfcc25273a4a9ab5&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Workspace\java\cyn-video-business\gateway\target\classes\fun\verda\bean" />
+      <recent name="E:\Workspace\java\cyn-video-business\user\src\main\resources\mapper" />
+      <recent name="E:\Workspace\java\cyn-video-business\user\src\main\java\fun\verda\dao" />
+      <recent name="E:\Workspace\java\cyn-video-business\user\src\main\java\fun\verda\service\impl" />
+      <recent name="E:\Workspace\java\cyn-video-business\user\src\main\java\fun\verda\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fun.verda.entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SMSApplication">
+    <configuration name="CategoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="category" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.verda.CategoryApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx256m -Xms256m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.verda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.verda.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.verda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SMSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.verda.SMSApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.verda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.verda.UserApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx256m -Xms256m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.verda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="video" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.verda.VideoApplication" />
+      <option name="VM_PARAMETERS" value="-Xms256m -Xmx256m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.verda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SMSApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.CategoryApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="Spring Boot.VideoApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.VideoApplication" />
+        <item itemvalue="Spring Boot.CategoryApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.SMSApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="f3af5fd9-8e2d-49a5-b017-f2ab7514b0b0" name="变更" comment="" />
+      <created>1654242880875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654242880875</updated>
+      <workItem from="1654242882261" duration="1040000" />
+      <workItem from="1654243940948" duration="2588000" />
+      <workItem from="1654246830329" duration="423000" />
+      <workItem from="1654247361144" duration="668000" />
+      <workItem from="1654256826625" duration="36000" />
+      <workItem from="1654325166031" duration="4976000" />
+      <workItem from="1654330573734" duration="3753000" />
+      <workItem from="1654395792102" duration="3747000" />
+      <workItem from="1654485818454" duration="4215000" />
+      <workItem from="1654497663249" duration="746000" />
+      <workItem from="1654498507091" duration="4612000" />
+      <workItem from="1654520846851" duration="3000" />
+      <workItem from="1654524539256" duration="2187000" />
+      <workItem from="1654526891738" duration="312000" />
+      <workItem from="1654527465434" duration="16000" />
+      <workItem from="1654598280903" duration="10055000" />
+      <workItem from="1654690274327" duration="11050000" />
+      <workItem from="1654747260021" duration="1409000" />
+      <workItem from="1654748692562" duration="2095000" />
+      <workItem from="1654762969707" duration="2125000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
